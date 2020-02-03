@@ -28,9 +28,8 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 openActivity2();
-                Snackbar snackbar = Snackbar.make(view, "", Snackbar.LENGTH_LONG)
-                        .setAction("UNDO", null);
-                snackbar.show();
+                Toast toast= Toast.makeText(getApplicationContext(),"YOU ARE WELCOME TO PHONE DIAL",Toast.LENGTH_SHORT);
+                toast.show();
 
 
             }
