@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -30,9 +31,10 @@ public class Main2Activity extends AppCompatActivity {
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Uri number=Uri.parse(text);
+                Uri number=Uri.parse("tel:"+text);
                 Intent callIntent =new Intent(Intent.ACTION_DIAL,number);
                 startActivity(callIntent);
+
 
             }
         });
